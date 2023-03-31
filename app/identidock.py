@@ -4,7 +4,7 @@ app = Flask(__name__)
 salt = "UNIQUE_SALT"
 default_name = 'Venito Camela'
 
-@app.route('/')
+@app.route('/', methods=['GET','POST'])
 def mainpage():
 	name = default_name
 	header = '<html><head><title>Identidock</title></head><body>'

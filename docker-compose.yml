@@ -1,0 +1,13 @@
+identidock:
+  build: .
+  ports:
+    - "5000:5000"
+  volumes:
+    - ./app:/app
+  links:
+    - dnmonster
+dnmonster:
+  ports:
+    - "5080:8080"
+  image: amouat/dnmonster:1.0
+
